@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420">
+<defs><linearGradient id="g" x1="0" x2="1"><stop stop-color="#111"/><stop offset=".45" stop-color="#777"/><stop offset=".7" stop-color="#eee"/><stop offset="1" stop-color="#111"/></linearGradient></defs>
+<rect width="900" height="420" fill="#080808"/><ellipse cx="450" cy="340" rx="340" ry="28" fill="#000"/>
+<path d="M105 285Q145 225 235 220L310 135Q330 110 400 105L575 110Q650 115 710 195L790 225Q830 240 835 285L820 315H90Z" fill="url(#g)" stroke="#aaa" stroke-width="4"/>
+<path d="M320 140L405 118L570 122L635 205H265Z" fill="#18252e" stroke="#fff" stroke-opacity=".3" stroke-width="3"/>
+<circle cx="240" cy="315" r="55" fill="#080808" stroke="#aaa" stroke-width="5"/><circle cx="240" cy="315" r="24" fill="#aaa"/>
+<circle cx="690" cy="315" r="55" fill="#080808" stroke="#aaa" stroke-width="5"/><circle cx="690" cy="315" r="24" fill="#aaa"/>
+<text x="450" y="390" text-anchor="middle" fill="#aaa" font-family="Arial" font-size="20" letter-spacing="5">THAR</text>
+</svg>

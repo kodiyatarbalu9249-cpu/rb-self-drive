@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RB SELF DRIVE — Porbandar</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="glass nav">
+  <a class="logo" href="#home">RB <span>SELF DRIVE</span></a>
+  <nav><a href="#cars">CARS</a><a href="#availability">AVAILABILITY</a><a href="#gallery">GALLERY</a><a href="#reviews">REVIEWS</a><a href="#contact">CONTACT</a></nav>
+  <button id="theme" class="glass-btn" type="button">☼</button><button type="button" class="btn red" onclick="goBooking()">BOOK NOW</button>
+</header>
+
+<section id="home" class="hero">
+  <div class="hero-copy"><small>PORBANDAR · GUJARAT</small><h1>DRIVE<br><i>YOUR WAY.</i></h1>
+  <p>Premium self-drive cars with live availability and simple online booking.</p>
+  <div class="actions"><button type="button" class="btn red" onclick="document.getElementById('availability').scrollIntoView({behavior:'smooth'})">CHECK AVAILABILITY</button><button type="button" class="btn glass-btn" onclick="document.getElementById('cars').scrollIntoView({behavior:'smooth'})">EXPLORE CARS</button></div></div>
+  <div class="hero-visual glass"><div class="shine"></div><img id="heroCar" alt="Mahindra Thar"><span>PREMIUM FLEET · REAL CAR PHOTO</span></div>
+</section>
+
+<section id="cars" class="section"><small>THE FLEET</small><h2>Choose your drive.</h2><div id="carGrid" class="grid"></div></section>
+
+<section id="availability" class="section"><div class="glass panel">
+<small>LIVE AVAILABILITY</small><h2>Find your car.</h2><div class="form-row"><input id="from" type="date"><input id="to" type="date"><button id="check" class="btn red">CHECK</button></div><div id="availabilityResult" class="results"></div>
+</div></section>
+
+<section id="booking" class="section"><div class="glass panel booking">
+<div><small>BOOK YOUR CAR</small><h2>Reserve your ride.</h2><p>Enter your details and send the booking directly to RB SELF DRIVE on WhatsApp.</p><strong>+91 99242 94444</strong></div>
+<form id="bookingForm">
+<input id="name" placeholder="Full Name" required>
+<select id="car" required><option value="">Choose Car</option></select>
+<input id="phone" type="tel" placeholder="Mobile Number" required>
+<div class="form-row"><input id="bfrom" type="date" required><input id="bto" type="date" required></div>
+<button class="btn red" type="submit">BOOK ON WHATSAPP</button>
+</form>
+</div></section>
+
+<section id="gallery" class="section"><small>GALLERY</small><h2>Your next journey.</h2><div id="galleryGrid" class="gallery"></div><p class="hint">Real vehicle photos are sourced from Wikimedia Commons under their displayed Creative Commons licenses. For a final commercial site, replace them with your own fleet photos or confirm the applicable license/attribution requirements.</p></section>
+
+<section id="reviews" class="section"><small>REVIEWS</small><h2>Real journeys.</h2><div id="reviewsGrid" class="grid"></div></section>
+
+<section id="faq" class="section"><small>FAQ</small><h2>Questions, answered.</h2><div class="faq glass">
+<details><summary>What documents are required?</summary><p>Contact RB SELF DRIVE for the current document and verification requirements.</p></details>
+<details><summary>What is the minimum rental period?</summary><p>Rental duration depends on the selected vehicle and booking.</p></details>
+<details><summary>Is a security deposit required?</summary><p>Ask the RB SELF DRIVE team for the current deposit policy before booking.</p></details>
+<details><summary>How do I check availability?</summary><p>Select your dates in the availability section and check the vehicle status.</p></details>
+</div></section>
+
+<section id="contact" class="section"><div class="glass panel contact"><div><small>RB SELF DRIVE</small><h2>Porbandar, Gujarat.</h2><p>Call / WhatsApp: <strong>+91 99242 94444</strong></p></div><iframe src="https://www.google.com/maps?q=Porbandar,Gujarat&output=embed" loading="lazy"></iframe></div></section>
+
+<div id="confirmModal" class="modal"><div class="modal-backdrop"></div><article class="glass confirm-card"><div class="success-ring">✓</div><small>BOOKING REQUEST SENT</small><h2 id="confirmTitle">Your booking request is ready.</h2><p id="confirmText">Your WhatsApp booking message has been opened successfully.</p><button class="btn red" onclick="closeConfirm()">DONE</button></article></div>
+
+<div id="carModal" class="modal">
+  <div class="modal-backdrop" onclick="closeCarDetails()"></div>
+  <article class="glass modal-card">
+    <button class="modal-close" onclick="closeCarDetails()">×</button>
+    <div class="modal-photo"><img id="modalPhoto" alt=""><div class="photo-glow"></div></div>
+    <div class="modal-info">
+      <small id="modalType"></small>
+      <h2 id="modalName"></h2>
+      <p id="modalDescription"></p>
+      <div id="modalSpecs" class="spec-grid"></div>
+      <div class="modal-price"><span>FROM</span><strong id="modalPrice"></strong><span>/ DAY</span></div>
+      <div class="actions"><button id="modalBook" class="btn red">BOOK THIS CAR</button><button class="btn glass-btn" onclick="closeCarDetails()">CLOSE</button></div>
+    </div>
+  </article>
+</div>
+<footer>© RB SELF DRIVE · PORBANDAR · GUJARAT</footer>
+<script src="/app.js"></script>
+</body></html>
