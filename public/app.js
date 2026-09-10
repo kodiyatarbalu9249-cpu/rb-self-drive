@@ -1,4 +1,4 @@
-const photoSources=const photoSources={
+const photoSources={
   "thar":"/assets/thar.jpg",
   "scorpio":"/assets/scorpio.jpg",
   "baleno":"/assets/baleno.jpg",
