@@ -1,4 +1,12 @@
-const photoSources={"thar":"/assets/thar.svg","scorpio":"/assets/scorpio.svg","baleno":"/assets/baleno.svg","dzire":"/assets/dzire.svg","swift":"/assets/swift.svg","ertiga":"/assets/eartiga.svg","exter":"/assets/exter.svg"};
+const photoSources=const photoSources={
+  "thar":"/assets/thar.jpg",
+  "scorpio":"/assets/scorpio.jpg",
+  "baleno":"/assets/baleno.jpg",
+  "dzire":"/assets/dzire.jpg",
+  "swift":"/assets/swift.jpg",
+  "ertiga":"/assets/eartiga.jpg",
+  "exter":"/assets/Exter.jpg"
+};
 const cars=[
 {id:"thar",name:"Mahindra Thar",type:"SUV",price:2499,transmission:"Manual",seats:"4",fuel:"Diesel",drive:"4×4",description:"Iconic off-road SUV for beach roads, highways and weekend adventures."},
 {id:"scorpio",name:"Mahindra Scorpio",type:"SUV",price:2999,transmission:"Manual",seats:"7",fuel:"Diesel",drive:"RWD",description:"Spacious SUV with a commanding driving position and long-distance comfort."},
