@@ -1,11 +1,12 @@
-const photoSources={"thar": "https://upload.wikimedia.org/wikipedia/commons/2/2d/Mahindra_Thar.jpg", "scorpio": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Mahindra_Scorpio.jpg", "baleno": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Baleno_Maruti_Suzuki.png", "dzire": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Maruti_Suzuki_Dzire_VXi_VVT_%28front%29.JPG", "swift": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Swift.jpg", "exter": "https://upload.wikimedia.org/wikipedia/commons/f/f4/2023_Hyundai_Exter.jpg"};
+const photoSources={"thar":"/assets/thar.svg","scorpio":"/assets/scorpio.svg","baleno":"/assets/baleno.svg","dzire":"/assets/dzire.svg","swift":"/assets/swift.svg","ertiga":"/assets/eartiga.svg","exter":"/assets/exter.svg"};
 const cars=[
 {id:"thar",name:"Mahindra Thar",type:"SUV",price:2499,transmission:"Manual",seats:"4",fuel:"Diesel",drive:"4×4",description:"Iconic off-road SUV for beach roads, highways and weekend adventures."},
 {id:"scorpio",name:"Mahindra Scorpio",type:"SUV",price:2999,transmission:"Manual",seats:"7",fuel:"Diesel",drive:"RWD",description:"Spacious SUV with a commanding driving position and long-distance comfort."},
 {id:"baleno",name:"Maruti Baleno",type:"Hatchback",price:1499,transmission:"Manual",seats:"5",fuel:"Petrol",drive:"FWD",description:"Premium hatchback suited for city drives and efficient everyday travel."},
 {id:"dzire",name:"Maruti Dzire",type:"Sedan",price:1599,transmission:"Manual",seats:"5",fuel:"Petrol",drive:"FWD",description:"Comfortable sedan with a practical cabin and smooth highway manners."},
 {id:"swift",name:"Maruti Swift",type:"Hatchback",price:1399,transmission:"Manual",seats:"5",fuel:"Petrol",drive:"FWD",description:"Fun, compact hatchback that is easy to drive around Porbandar and beyond."},
-{id:"exter",name:"Hyundai Exter",type:"SUV",price:1699,transmission:"Manual",seats:"5",fuel:"Petrol",drive:"FWD",description:"Compact SUV with a high seating position and versatile urban character."}
+{id:"exter",name:"Hyundai Exter",type:"SUV",price:1699,transmission:"Manual",seats:"5",fuel:"Petrol",drive:"FWD",description:"Compact SUV with a high seating position and versatile urban character."},
+{id:"ertiga",name:"Maruti Ertiga",type:"MPV",price:1899,transmission:"Manual",seats:"7",fuel:"Petrol",drive:"FWD",description:"Spacious 7-seater MPV for family trips, airport runs and comfortable highway travel."}
 ];
 const $=s=>document.querySelector(s);
 function photo(id){return photoSources[id]}
@@ -13,8 +14,8 @@ $("#heroCar").src=photo("thar");
 cars.forEach(c=>{
   const img=photo(c.id);
   $("#carGrid").insertAdjacentHTML("beforeend",`<article class="glass card">
-    <img src="${img}" alt="${c.name}" loading="lazy" onerror="this.src='/assets/${c.id}.svg'">
-    <h3>${c.name}</h3><small>${c.type} · From ₹${c.price}/day</small><br><br>
+    <img src="${img}" alt="${c.name}" loading="lazy" onerror="this.style.display='none'">
+    <h3>${c.name}</h3><small>${c.type} · ${c.price ? `From ₹${c.price}/day` : "Call for Price"}</small><br><br>
     <button class="btn red" onclick="openCarDetails('${c.id}')">VIEW DETAILS</button>
     <button type="button" class="btn glass-btn detail-btn" onclick="goBooking('${c.id}')">BOOK</button>
   </article>`);
@@ -28,7 +29,7 @@ function openCarDetails(id){
  $("#modalPhoto").src=photo(c.id); $("#modalPhoto").alt=c.name;
  $("#modalName").textContent=c.name; $("#modalType").textContent=`${c.type} · PREMIUM SELF DRIVE`;
  $("#modalDescription").textContent=c.description;
- $("#modalPrice").textContent=`₹${c.price.toLocaleString("en-IN")}`;
+ $("#modalPrice").textContent=c.price ? `₹${c.price.toLocaleString("en-IN")}` : "CALL FOR PRICE";
  $("#modalSpecs").innerHTML=[
    ["TRANSMISSION",c.transmission],["SEATS",c.seats],["FUEL",c.fuel],["DRIVE",c.drive]
  ].map(s=>`<div class="spec"><b>${s[0]}</b><span>${s[1]}</span></div>`).join("");
