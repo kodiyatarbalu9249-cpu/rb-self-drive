@@ -8,13 +8,13 @@ const photoSources={
   "exter":"/assets/Exter.jpg"
 };
 const cars=[
-{id:"thar",name:"Mahindra Thar",type:"SUV",price:2499,transmission:"Manual",seats:"4",fuel:"Diesel",drive:"4×4",description:"Iconic off-road SUV for beach roads, highways and weekend adventures."},
-{id:"scorpio",name:"Mahindra Scorpio",type:"SUV",price:2999,transmission:"Manual",seats:"7",fuel:"Diesel",drive:"RWD",description:"Spacious SUV with a commanding driving position and long-distance comfort."},
-{id:"baleno",name:"Maruti Baleno",type:"Hatchback",price:1499,transmission:"Manual",seats:"5",fuel:"Petrol",drive:"FWD",description:"Premium hatchback suited for city drives and efficient everyday travel."},
-{id:"dzire",name:"Maruti Dzire",type:"Sedan",price:1599,transmission:"Manual",seats:"5",fuel:"Petrol",drive:"FWD",description:"Comfortable sedan with a practical cabin and smooth highway manners."},
-{id:"swift",name:"Maruti Swift",type:"Hatchback",price:1399,transmission:"Manual",seats:"5",fuel:"Petrol",drive:"FWD",description:"Fun, compact hatchback that is easy to drive around Porbandar and beyond."},
-{id:"exter",name:"Hyundai Exter",type:"SUV",price:1699,transmission:"Manual",seats:"5",fuel:"Petrol",drive:"FWD",description:"Compact SUV with a high seating position and versatile urban character."},
-{id:"ertiga",name:"Maruti Ertiga",type:"MPV",price:1899,transmission:"Manual",seats:"7",fuel:"Petrol",drive:"FWD",description:"Spacious 7-seater MPV for family trips, airport runs and comfortable highway travel."}
+{id:"thar",name:"Mahindra Thar",type:"SUV",price:4000,transmission:"Manual",seats:"4",fuel:"Diesel",drive:"4×4",description:"Iconic off-road SUV for beach roads, highways and weekend adventures."},
+{id:"scorpio",name:"Mahindra Scorpio",type:"SUV",price:4000,transmission:"Manual",seats:"7",fuel:"Diesel",drive:"RWD",description:"Spacious SUV with a commanding driving position and long-distance comfort."},
+{id:"baleno",name:"Maruti Baleno",type:"Hatchback",price:1500,transmission:"Manual",seats:"5",fuel:"Petrol",drive:"FWD",description:"Premium hatchback suited for city drives and efficient everyday travel."},
+{id:"dzire",name:"Maruti Dzire",type:"Sedan",price:1800,transmission:"Manual",seats:"5",fuel:"Petrol",drive:"FWD",description:"Comfortable sedan with a practical cabin and smooth highway manners."},
+{id:"swift",name:"Maruti Swift",type:"Hatchback",price:1500,transmission:"Manual",seats:"5",fuel:"Petrol",drive:"FWD",description:"Fun, compact hatchback that is easy to drive around Porbandar and beyond."},
+{id:"exter",name:"Hyundai Exter",type:"SUV",price:1800,transmission:"Manual",seats:"5",fuel:"Petrol+cng",drive:"FWD",description:"Compact SUV with a high seating position and versatile urban character."},
+{id:"ertiga",name:"Maruti Ertiga",type:"MPV",price:2000,transmission:"Manual",seats:"7",fuel:"Petrol+cng",drive:"FWD",description:"Spacious 7-seater MPV for family trips, airport runs and comfortable highway travel."}
 ];
 const $=s=>document.querySelector(s);
 function photo(id){return photoSources[id]}
